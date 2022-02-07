@@ -14,7 +14,7 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    /*justify-content: center;*/
+    justify-content: center;
     align-items: center;
 }
 .bgd i{
@@ -72,7 +72,7 @@ img{
 .scene .rocket{
     position: relative;
     animation: animate 0.2s ease infinite;
-    top: 600px;
+    top: 180px;
 }
 @keyframes animate {
     0%, 100%{
@@ -103,4 +103,20 @@ img{
     height: 220px;
     background: linear-gradient(#00d0ff, transparent);
     filter: blur(20px);
+}
+@media screen and (max-width: 768px){
+    .scene h1{
+        width: 100%;
+    }
+    .scene .rocket{
+        top: 220px;
+    }
+    /*@keyframes animateStars{
+        0%{
+            transform: translateY(0);
+        }
+        100%{
+            transform: translateY(300vh);
+        }
+    }*/
 }
