@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Vollkorn:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.scene{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    align-items: center;
+}
+.bgd i{
+    position: absolute;
+    top: -250px;
+    background: rgba(245, 243, 243, 0.5);
+    animation: animateStars linear infinite;
+}
+@keyframes animateStars{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(200vh);
+    }
+}
+.scene h1{
+    position: absolute;
+    top: 50px;
+    width: 30%;
+    margin: auto;
+    z-index: 1000;
+    color: white;
+    text-align: center;
+    font-family: 'Vollkorn', serif;
+}
+.scene h2{
+    position: absolute;
+    top: 100px;
+    width: 30%;
+    margin: auto;
+    z-index: 1000;
+    color: white;
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+}
+.btn{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 160px;
+}
+button{
+    padding: 7px 10px;
+    margin: 5px;
+    width: 200px;
+    font-family: 'Vollkorn', serif;
+    font-size: 18px;
+}
+
+img{
+    width: 80px;
+}
+.scene .rocket{
+    position: relative;
+    animation: animate 0.2s ease infinite;
+    top: 600px;
+}
+@keyframes animate {
+    0%, 100%{
+        transform: translateY(-2px);
+    }
+    50%{
+        transform: translateY(2px);
+    }
+}
+.scene .rocket::before{
+    content: '';
+    position: absolute;
+    bottom: -195px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 210px;
+    background: linear-gradient(#00d0ff, transparent);
+    filter: blur(7px);
+}
+.scene .rocket::after{
+    content: '';
+    position: absolute;
+    bottom: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 220px;
+    background: linear-gradient(#00d0ff, transparent);
+    filter: blur(20px);
+}
